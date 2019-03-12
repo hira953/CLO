@@ -25,7 +25,7 @@ namespace WindowsFormsApplication2
             SqlDataAdapter sda = new SqlDataAdapter(query, conn);
             sda.SelectCommand.ExecuteNonQuery();
             conn.Close();
-            MessageBox.Show("DATA INSERTED SUCESSFULLY");
+            MessageBox.Show("Data Inserted Successfully!");
             txtId.Text = "";
             txtFirstName.Text = "";
             txtLastName.Text = "";
@@ -60,7 +60,7 @@ namespace WindowsFormsApplication2
             SqlDataAdapter sda = new SqlDataAdapter(query, conn);
             sda.SelectCommand.ExecuteNonQuery();
             conn.Close();
-            MessageBox.Show("DATA UPDATED SUCESSFULLY!");
+            MessageBox.Show("Data Updated Successfully!");
             txtId.Text = "";
             txtFirstName.Text = "";
             txtLastName.Text = "";
@@ -98,7 +98,7 @@ namespace WindowsFormsApplication2
             SqlDataAdapter sda = new SqlDataAdapter(query, conn);
             sda.SelectCommand.ExecuteNonQuery();
             conn.Close();
-            MessageBox.Show("DATA DELETED!!");
+            MessageBox.Show("Data Deleted!!");
             txtId.Text = "";
             txtFirstName.Text = "";
             txtLastName.Text = "";
@@ -106,6 +106,51 @@ namespace WindowsFormsApplication2
             txtEmail.Text = "";
             txtRegNumber.Text = "";
             txtStatus.Text = "";
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            conn.Open();
+            string query = "INSERT INTO Clo(Name, DateCreated, DateUpdated) VALUES ('" + txtClo.Text + "', '" + dateTimePicker1.Value.ToShortDateString() + "', '" + dateTimePicker2.Value.ToShortDateString() + "')";
+            SqlDataAdapter sda = new SqlDataAdapter(query, conn);
+            sda.SelectCommand.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("CLO's added!");
+            txtClo.Text = "";
+        }
+
+        private void btnviewClo_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            string query = "SELECT * FROM Clo";
+            SqlDataAdapter sda = new SqlDataAdapter(query, conn);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView2.DataSource = dt;
+            conn.Close();
+            txtClo.Text = "";
+        }
+
+        private void btnupdClo_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            string query = "UPDATE Clo SET Name = '" + txtClo.Text + "', DateCreated = '" + dateTimePicker1.Value.ToShortDateString() + "', DateUpdated = '" + dateTimePicker2.Value.ToShortDateString() + "' ";
+            SqlDataAdapter sda = new SqlDataAdapter(query, conn);
+            sda.SelectCommand.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("Selected CLO updated successfully!");
+            txtClo.Text = "";
+        }
+
+        private void dataGridView2_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            txtClo.Text = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();
+            //dateTimePicker1.Value.ToShortDateString() = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();
         }
     }
 }
