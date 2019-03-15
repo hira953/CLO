@@ -31,10 +31,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.lblId = new System.Windows.Forms.Label();
             this.btnView = new System.Windows.Forms.Button();
-            this.txtStatus = new System.Windows.Forms.TextBox();
             this.lblStatus = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -51,29 +48,37 @@
             this.labLastName = new System.Windows.Forms.Label();
             this.labFirstName = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.txtClo = new System.Windows.Forms.RichTextBox();
-            this.btnaddclo = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.btnupdClo = new System.Windows.Forms.Button();
-            this.btndelClo = new System.Windows.Forms.Button();
             this.btnviewClo = new System.Windows.Forms.Button();
+            this.btndelClo = new System.Windows.Forms.Button();
+            this.btnupdClo = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnaddclo = new System.Windows.Forms.Button();
+            this.txtClo = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(0, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -82,11 +87,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.txtId);
-            this.tabPage1.Controls.Add(this.lblId);
             this.tabPage1.Controls.Add(this.btnView);
-            this.tabPage1.Controls.Add(this.txtStatus);
             this.tabPage1.Controls.Add(this.lblStatus);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.btnDelete);
@@ -107,7 +110,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1046, 301);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Manage Student";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
@@ -120,23 +123,6 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Student Registration";
             // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(180, 30);
-            this.txtId.Name = "txtId";
-            this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(100, 20);
-            this.txtId.TabIndex = 18;
-            // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(48, 37);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(16, 13);
-            this.lblId.TabIndex = 17;
-            this.lblId.Text = "Id";
-            // 
             // btnView
             // 
             this.btnView.Location = new System.Drawing.Point(277, 257);
@@ -146,13 +132,6 @@
             this.btnView.Text = "View";
             this.btnView.UseVisualStyleBackColor = true;
             this.btnView.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.Location = new System.Drawing.Point(180, 216);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(100, 20);
-            this.txtStatus.TabIndex = 15;
             // 
             // lblStatus
             // 
@@ -295,86 +274,44 @@
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.btnaddclo);
             this.tabPage2.Controls.Add(this.txtClo);
-            this.tabPage2.Controls.Add(this.dateTimePicker2);
-            this.tabPage2.Controls.Add(this.dateTimePicker1);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1046, 301);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Manage Clo";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // btnviewClo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "CLO Name";
+            this.btnviewClo.Location = new System.Drawing.Point(310, 254);
+            this.btnviewClo.Name = "btnviewClo";
+            this.btnviewClo.Size = new System.Drawing.Size(75, 23);
+            this.btnviewClo.TabIndex = 11;
+            this.btnviewClo.Text = "VIEW";
+            this.btnviewClo.UseVisualStyleBackColor = true;
+            this.btnviewClo.Click += new System.EventHandler(this.btnviewClo_Click);
             // 
-            // label3
+            // btndelClo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 155);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Date Created";
+            this.btndelClo.Location = new System.Drawing.Point(229, 254);
+            this.btndelClo.Name = "btndelClo";
+            this.btndelClo.Size = new System.Drawing.Size(75, 23);
+            this.btndelClo.TabIndex = 10;
+            this.btndelClo.Text = "DELETE CLO";
+            this.btndelClo.UseVisualStyleBackColor = true;
+            this.btndelClo.Click += new System.EventHandler(this.btndelClo_Click);
             // 
-            // label4
+            // btnupdClo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(47, 194);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Date Updated";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(158, 149);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 3;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(158, 188);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 4;
-            // 
-            // txtClo
-            // 
-            this.txtClo.Location = new System.Drawing.Point(158, 66);
-            this.txtClo.Name = "txtClo";
-            this.txtClo.Size = new System.Drawing.Size(243, 63);
-            this.txtClo.TabIndex = 5;
-            this.txtClo.Text = "";
-            // 
-            // btnaddclo
-            // 
-            this.btnaddclo.Location = new System.Drawing.Point(50, 254);
-            this.btnaddclo.Name = "btnaddclo";
-            this.btnaddclo.Size = new System.Drawing.Size(75, 23);
-            this.btnaddclo.TabIndex = 6;
-            this.btnaddclo.Text = "ADD CLO";
-            this.btnaddclo.UseVisualStyleBackColor = true;
-            this.btnaddclo.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(34, 26);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Register CLO\'s";
+            this.btnupdClo.Location = new System.Drawing.Point(131, 254);
+            this.btnupdClo.Name = "btnupdClo";
+            this.btnupdClo.Size = new System.Drawing.Size(92, 23);
+            this.btnupdClo.TabIndex = 9;
+            this.btnupdClo.Text = "UPDATE CLO";
+            this.btnupdClo.UseVisualStyleBackColor = true;
+            this.btnupdClo.Click += new System.EventHandler(this.btnupdClo_Click);
             // 
             // dataGridView2
             // 
@@ -389,34 +326,132 @@
             this.dataGridView2.TabIndex = 8;
             this.dataGridView2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView2_MouseDoubleClick);
             // 
-            // btnupdClo
+            // label5
             // 
-            this.btnupdClo.Location = new System.Drawing.Point(131, 254);
-            this.btnupdClo.Name = "btnupdClo";
-            this.btnupdClo.Size = new System.Drawing.Size(92, 23);
-            this.btnupdClo.TabIndex = 9;
-            this.btnupdClo.Text = "UPDATE CLO";
-            this.btnupdClo.UseVisualStyleBackColor = true;
-            this.btnupdClo.Click += new System.EventHandler(this.btnupdClo_Click);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(34, 26);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Register CLO\'s";
             // 
-            // btndelClo
+            // btnaddclo
             // 
-            this.btndelClo.Location = new System.Drawing.Point(229, 254);
-            this.btndelClo.Name = "btndelClo";
-            this.btndelClo.Size = new System.Drawing.Size(75, 23);
-            this.btndelClo.TabIndex = 10;
-            this.btndelClo.Text = "DELETE CLO";
-            this.btndelClo.UseVisualStyleBackColor = true;
+            this.btnaddclo.Location = new System.Drawing.Point(50, 254);
+            this.btnaddclo.Name = "btnaddclo";
+            this.btnaddclo.Size = new System.Drawing.Size(75, 23);
+            this.btnaddclo.TabIndex = 6;
+            this.btnaddclo.Text = "ADD CLO";
+            this.btnaddclo.UseVisualStyleBackColor = true;
+            this.btnaddclo.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // btnviewClo
+            // txtClo
             // 
-            this.btnviewClo.Location = new System.Drawing.Point(310, 254);
-            this.btnviewClo.Name = "btnviewClo";
-            this.btnviewClo.Size = new System.Drawing.Size(75, 23);
-            this.btnviewClo.TabIndex = 11;
-            this.btnviewClo.Text = "VIEW";
-            this.btnviewClo.UseVisualStyleBackColor = true;
-            this.btnviewClo.Click += new System.EventHandler(this.btnviewClo_Click);
+            this.txtClo.Location = new System.Drawing.Point(158, 66);
+            this.txtClo.Name = "txtClo";
+            this.txtClo.Size = new System.Drawing.Size(243, 63);
+            this.txtClo.TabIndex = 5;
+            this.txtClo.Text = "";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(47, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "CLO Name";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.button4);
+            this.tabPage3.Controls.Add(this.button3);
+            this.tabPage3.Controls.Add(this.button2);
+            this.tabPage3.Controls.Add(this.button1);
+            this.tabPage3.Controls.Add(this.richTextBox1);
+            this.tabPage3.Controls.Add(this.dataGridView3);
+            this.tabPage3.Controls.Add(this.label6);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1046, 301);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Manage Rubrics";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(42, 143);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 13);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Rubric Detail";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(454, 37);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.Size = new System.Drawing.Size(461, 227);
+            this.dataGridView3.TabIndex = 7;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(152, 99);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(228, 96);
+            this.richTextBox1.TabIndex = 8;
+            this.richTextBox1.Text = "";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(35, 241);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Add";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(131, 241);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Update";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(233, 241);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Delete";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(341, 241);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "View";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(180, 223);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 20;
             // 
             // Form1
             // 
@@ -434,6 +469,9 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -457,24 +495,26 @@
         private System.Windows.Forms.Label labLastName;
         private System.Windows.Forms.Label labFirstName;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Button btnView;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnaddclo;
         private System.Windows.Forms.RichTextBox txtClo;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button btnviewClo;
         private System.Windows.Forms.Button btndelClo;
         private System.Windows.Forms.Button btnupdClo;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
