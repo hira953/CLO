@@ -32,7 +32,7 @@ namespace WindowsFormsApplication2
             txtContact.Text = "";
             txtEmail.Text = "";
             txtRegNumber.Text = "";
-            //txtStatus.Text = "";
+            comboBox1.Text = "";
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace WindowsFormsApplication2
             txtContact.Text = "";
             txtEmail.Text = "";
             txtRegNumber.Text = "";
-            //txtStatus.Text = "";
+            comboBox1.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -70,7 +70,7 @@ namespace WindowsFormsApplication2
             txtContact.Text = "";
             txtEmail.Text = "";
             txtRegNumber.Text = "";
-            //txtStatus.Text = "";
+            comboBox1.Text = "";
         }
 
         private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -89,6 +89,22 @@ namespace WindowsFormsApplication2
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            try
+            {
+                string combo = "SELECT LookupId FROM Lookup WHERE LookupId = 5 OR LookupId = 6";
+                SqlDataAdapter da = new SqlDataAdapter(combo, conn);
+                conn.Open();
+                DataSet ds = new DataSet();
+                da.Fill(ds, "Lookup");
+                comboBox1.DisplayMember = "LookupId";
+                comboBox1.ValueMember = "LookupId";
+                comboBox1.DataSource = ds.Tables["Lookup"];
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error occured!");
+            }
             /*SqlDataAdapter sda = new SqlDataAdapter("SELECT isnull(max(cast(Id as int)),0)+1 from Student", conn);
             DataTable dt = new DataTable();
             sda.Fill(dt);
@@ -114,7 +130,7 @@ namespace WindowsFormsApplication2
             txtContact.Text = "";
             txtEmail.Text = "";
             txtRegNumber.Text = "";
-            //txtStatus.Text = "";
+            comboBox1.Text = "";
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -183,9 +199,9 @@ namespace WindowsFormsApplication2
         private void button1_Click_2(object sender, EventArgs e)
         {
             conn.Open();
-            //string query = "SELECT Clo.Id, Clo.Name, Rubric.Id, Rubric.Details FROM Rubric INNER JOIN Clo ON Clo.Id = Rubric.CloId ";
-            string query1 = "INSERT INTO Rubric(Details, CloId)  SELECT Id, Name FROM Clo WHERE Id = CloId ";   //VALUES ('" + richTextBox1.Text + "', '" + query + "')";
-            SqlDataAdapter sda = new SqlDataAdapter(query1, conn);
+            string query = "INSERT INTO Rubric (Details, CloId) VALUES ('"+richTextBox1.Text+"', '"+comboBox1.Text+"')";
+            //string query1 = "INSERT INTO Rubric(Details, CloId)  SELECT Id, Name FROM Clo WHERE Id = CloId " VALUES ('" + richTextBox1.Text + "', '" + query + "')";
+            SqlDataAdapter sda = new SqlDataAdapter(query, conn);
             sda.SelectCommand.ExecuteNonQuery();
             conn.Close();
             MessageBox.Show("Rubrics added!");
@@ -200,6 +216,36 @@ namespace WindowsFormsApplication2
             DataTable dt = new DataTable();
             sda.Fill(dt);
             dataGridView3.DataSource = dt;
+            conn.Close();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            SqlCommand sc = new SqlCommand("Select Id, CloId from Rubric", conn);
+            SqlDataReader reader;
+            reader = sc.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Id", typeof(string));
+            dt.Columns.Add("CloId", typeof(string));
+            dt.Load(reader);
+            comboBox1.DisplayMember = "CloId";
+            comboBox1.ValueMember = "Id"; comboBox1.DataSource = dt;
             conn.Close();
         }
     }
