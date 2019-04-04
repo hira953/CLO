@@ -40,9 +40,9 @@ namespace WindowsFormsApplication2
 
         private void button3_Click(object sender, EventArgs e)
         {
-            panel3.Height = button3.Height;
+            /*panel3.Height = button3.Height;
             panel3.Top = button3.Top;
-            userControl31.BringToFront();
+            userControl31.BringToFront();*/
         }
     }
 }

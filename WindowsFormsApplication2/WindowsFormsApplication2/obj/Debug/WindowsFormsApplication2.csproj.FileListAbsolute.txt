@@ -28,4 +28,3 @@ C:\Users\Lahore1\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\obj\D
 C:\Users\Lahore1\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.UserControl1.resources
 C:\Users\Lahore1\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.UserControl2.resources
 C:\Users\Lahore1\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
-C:\Users\Lahore1\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.UserControl3.resources

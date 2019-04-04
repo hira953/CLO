@@ -36,11 +36,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.userControl21 = new WindowsFormsApplication2.UserControl2();
-            this.userControl11 = new WindowsFormsApplication2.UserControl1();
-            this.userControl31 = new WindowsFormsApplication2.UserControl3();
+            this.label1 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -139,6 +137,16 @@
             this.panel4.TabIndex = 1;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApplication2.Properties.Resources.download;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(99, 79);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -150,43 +158,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "UET\r\n";
             // 
-            // pictureBox1
+            // backgroundWorker1
             // 
-            this.pictureBox1.Image = global::WindowsFormsApplication2.Properties.Resources.download;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(99, 79);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // userControl21
-            // 
-            this.userControl21.Location = new System.Drawing.Point(213, 141);
-            this.userControl21.Name = "userControl21";
-            this.userControl21.Size = new System.Drawing.Size(850, 421);
-            this.userControl21.TabIndex = 3;
-            // 
-            // userControl11
-            // 
-            this.userControl11.Location = new System.Drawing.Point(213, 141);
-            this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(894, 470);
-            this.userControl11.TabIndex = 2;
-            // 
-            // userControl31
-            // 
-            this.userControl31.Location = new System.Drawing.Point(213, 141);
-            this.userControl31.Name = "userControl31";
-            this.userControl31.Size = new System.Drawing.Size(791, 355);
-            this.userControl31.TabIndex = 4;
+            //this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1063, 567);
-            this.Controls.Add(this.userControl31);
             this.Controls.Add(this.userControl21);
             this.Controls.Add(this.userControl11);
             this.Controls.Add(this.panel4);
@@ -218,6 +198,6 @@
         private System.Windows.Forms.Button button2;
         private UserControl1 userControl11;
         private UserControl2 userControl21;
-        private UserControl3 userControl31;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
